@@ -1,5 +1,4 @@
 from step_1 import transform_products_to_list
-from pprint import pprint
 
 
 def calculate_total_per_invoices(products_string):
