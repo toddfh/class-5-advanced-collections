@@ -8,14 +8,10 @@ def calculate_total_per_invoices(products_string):
     for products in products_list:
         invoice = products[0]
         customer_id = products[-2]
-        unit_price = float(products[5])
-        quantity = float(products[3])
-
-        total = unit_price * quantity
+        total = float(products[5]) * float(products[3])
 
         product.setdefault(customer_id, {})
         product[customer_id].setdefault(invoice, 0)
-        product[customer_id][invoice] += total
-        product[customer_id][invoice] = round(product[customer_id][invoice], 2)
+        product[customer_id][invoice] += round(total, 2)
 
     return product
