@@ -1,5 +1,3 @@
-from data import products_string
-from pprint import pprint
 from step_1 import transform_products_to_list
 
 
@@ -9,13 +7,7 @@ def group_products_by_customer(products_string):
 
     for product in products_list:
         customer_id = product[-2]
-
-#        if customer_id not in customers:
-#            customers[customer_id] = []
-
         customers.setdefault(customer_id, [])
         customers[customer_id].append(product)
 
     return customers
-
-#pprint(group_products_by_customer(products_string))

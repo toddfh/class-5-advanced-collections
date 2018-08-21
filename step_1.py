@@ -8,8 +8,4 @@ def transform_products_to_list(products_string):
         if product_line:
             product = product_line.split(',')
             products_list.append(product)
-
-    #print(products_list)
     return products_list
-
-transform_products_to_list(products_string)
